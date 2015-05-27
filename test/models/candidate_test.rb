@@ -10,10 +10,10 @@ class CandidateTest < ActiveSupport::TestCase
   end
 
   test "candidate has votes" do
-    miguel = Candidate.create(name: "Miguel Gibson", hometown: "Jenkinsborough", district: "NC 25")
-    halie = Voter.create(name: "Halie Mitchell")
+    miguel = Candidate.create!(name: "Miguel Gibson", hometown: "Jenkinsborough", district: "NC 25")
+    halie = Voter.create!(name: "Halie Mitchell")
 
-    vote_one = Vote.create(candidate: miguel, voter: halie)
+    vote_one = Vote.create!(candidate: miguel, voter: halie)
 
     assert_equal 1, miguel.votes.count
     assert_equal miguel, vote_one.candidate

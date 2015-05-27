@@ -10,14 +10,14 @@ class VoterTest < ActiveSupport::TestCase
   end
 
   test "voter has only one vote" do
-    miguel = Candidate.create(name: "Miguel Gibson", hometown: "Jenkinsborough", district: "NC 25")
-    trudie = Candidate.create(name: "Trudie Daniel", hometown: "Hilpertfurt", district: "NC 25")
+    miguel = Candidate.create!(name: "Miguel Gibson", hometown: "Jenkinsborough", district: "NC 25")
+    trudie = Candidate.create!(name: "Trudie Daniel", hometown: "Hilpertfurt", district: "NC 25")
     halie = Voter.create(name: "Halie Mitchell")
 
-    vote_one = Vote.create(candidate: miguel, voter: halie)
+    vote_one = Vote.create!(candidate: miguel, voter: halie)
     vote_two = Vote.new(candidate: trudie, voter: halie)
 
-    refute vote_two.save  
+    refute vote_two.save
     assert_equal halie, vote_one.voter
   end
 end
