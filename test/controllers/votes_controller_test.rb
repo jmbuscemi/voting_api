@@ -1,11 +1,6 @@
 require 'test_helper'
 
 class VotesControllerTest < ActionController::TestCase
-  test "should get index" do
-    get :index
-    assert_response :success
-    assert response.body =~ /candidate/
-  end
 
   test "should be able to create" do
     mckenna = Candidate.create!(name: "Mckenna Schowalter", hometown: "North Forrestfort",
@@ -20,7 +15,6 @@ class VotesControllerTest < ActionController::TestCase
     end
   end
 
-
   test "can destroy" do
     number_of_votes = Vote.count
     miguel = Candidate.create!(name: "Miguel Gibson", hometown: "Jenkinsborough",
@@ -34,7 +28,6 @@ class VotesControllerTest < ActionController::TestCase
 
     assert_equal number_of_votes, Vote.count
     assert response.body =~ /delete/
-
   end
 
 end
