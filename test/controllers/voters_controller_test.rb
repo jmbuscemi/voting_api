@@ -14,4 +14,12 @@ class VotersControllerTest < ActionController::TestCase
     assert response.body =~ /Terrance/
   end
 
+  test "can update" do
+    brad = Voter.create(name: "Brad Roob", party_name: "R")
+    cora = Voter.create(name: "Cora Schuppe", party_name: "D")
+
+    patch :update, {id: brad.id, party_name: "Independent"}
+    assert response.body =~ /Independent/
+  end
+
 end

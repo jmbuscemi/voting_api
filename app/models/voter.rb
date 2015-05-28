@@ -4,4 +4,5 @@ class Voter < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
   validates :party_name, presence: true
 
+
 end

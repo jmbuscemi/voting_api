@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   get 'candidates/index'
   get 'candidates/show'
+
   get 'voters/show'
   post 'voters/create'
+  patch 'voters/update'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

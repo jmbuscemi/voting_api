@@ -14,6 +14,13 @@ class VotersController < ApplicationController
       render json: Voter.find_by_id(params[:id])
   end
 
+  def update
+    voter = Voter.find_by_id(params[:id])
+    voter.update(name: params[:name]) if params[:name]
+    voter.update(party_name: params[:party_name]) if params[:party_name]
+    render json: voter
+  end
+
   # private def restrict_access
   #   authenticate_or_request_with_http_token do |token, options|
   #     Voter.exists?(access_token: token)
