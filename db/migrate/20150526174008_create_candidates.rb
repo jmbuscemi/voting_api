@@ -4,7 +4,7 @@ class CreateCandidates < ActiveRecord::Migration
       t.string :name
       t.string :hometown
       t.string :district
-      t.integer :party_id
+      t.string :party_name
 
       t.timestamps null: false
     end

@@ -4,10 +4,10 @@ one:
   name: MyString
   hometown: MyString
   district: MyString
-  party_id: 1
+  party_name: MyString
 
 two:
   name: MyString
   hometown: MyString
   district: MyString
-  party_id: 1
+  party_name: MyString

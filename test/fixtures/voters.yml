@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  party_id: 1
+  party_name: MyString
 
 two:
   name: MyString
-  party_id: 1
+  party_name: MyString
