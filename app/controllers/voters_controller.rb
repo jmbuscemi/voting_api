@@ -2,7 +2,7 @@ class VotersController < ApplicationController
   # before_filter :restrict_access
 
   def create
-    voter = Voter.create(name: params[:name], party_name: params[:party_name]) #, access_token: SecureRandom.hex)
+    voter = Voter.create(name: params[:name], party_name: params[:party_name])
     if voter.save
       render json: voter
     else

@@ -12,4 +12,10 @@ class VotesController < ApplicationController
     end
   end
 
+  def destroy
+    vote = Vote.find_by_id(params[:id])
+    vote.destroy
+    render json: "Your vote has been deleted."
+  end
+
 end
